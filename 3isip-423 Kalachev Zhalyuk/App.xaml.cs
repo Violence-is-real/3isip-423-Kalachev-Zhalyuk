@@ -9,7 +9,7 @@ using System.Windows;
 namespace _3isip_423_Kalachev_Zhalyuk
 {
     /// <summary>
-    /// Логика взаимодействия для App.xaml
+    /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {

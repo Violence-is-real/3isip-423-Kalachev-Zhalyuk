@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:_3isip_423_Kalachev_Zhalyuk"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>

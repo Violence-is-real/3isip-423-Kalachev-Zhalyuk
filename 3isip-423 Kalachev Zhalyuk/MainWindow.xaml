@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_3isip_423_Kalachev_Zhalyuk"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Практическая работа 4 Калaчев Жалюк" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Content="Страница 1" Click="Page1_Click" Margin="5"/>
+            <Button Content="Страница 2" Click="Page2_Click" Margin="5"/>
+            <Button Content="Страница 3" Click="Page3_Click" Margin="5"/>
+        </StackPanel>
+        <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
