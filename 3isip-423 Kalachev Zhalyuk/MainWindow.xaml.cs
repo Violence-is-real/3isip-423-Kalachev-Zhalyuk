@@ -21,5 +21,10 @@ namespace _3isip_423_Kalachev_Zhalyuk
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+            mainFrame.Navigate(new Page1());
+        }
     }
 }
