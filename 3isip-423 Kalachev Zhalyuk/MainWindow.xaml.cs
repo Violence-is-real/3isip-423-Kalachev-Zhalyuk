@@ -26,5 +26,19 @@ namespace _3isip_423_Kalachev_Zhalyuk
             InitializeComponent();
             mainFrame.Navigate(new Page1());
         }
+        private void Page1_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Page1());
+        }
+
+        private void Page2_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Page2());
+        }
+
+        private void Page3_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Page3());
+        }
     }
 }
