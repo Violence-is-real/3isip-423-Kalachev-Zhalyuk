@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _3isip_423_Kalachev_Zhalyuk
 {
@@ -24,5 +13,42 @@ namespace _3isip_423_Kalachev_Zhalyuk
         {
             InitializeComponent();
         }
+
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            double x, y, z, c;
+            if (!double.TryParse(tbX.Text, out x) ||
+                !double.TryParse(tbY.Text, out y) ||
+                !double.TryParse(tbZ.Text, out z))
+            {
+                MessageBox.Show("Введите корректные числовые значения!");
+                return;
+            }
+
+            if (y == 0) // Проверка на возможные проблемы, но в формуле y в числителе
+            {
+                MessageBox.Show("y не может быть нулем в некоторых частях!");
+                return;
+            }
+
+            double denominator = Math.Abs(x) + 1 / (y * y + 1);
+            if (denominator == 0)
+            {
+                MessageBox.Show("Деление на ноль!");
+                return;
+            }
+
+            c = 2 * Math.Pow(y, 3) + 3 * x * y - (y * (Math.Atan(z) - Math.PI / 2)) / denominator;
+            tbResult.Text = c.ToString();
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            tbX.Text = "";
+            tbY.Text = "";
+            tbZ.Text = "";
+            tbResult.Text = "";
+        }
     }
 }
+
